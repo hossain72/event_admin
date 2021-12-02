@@ -10,7 +10,6 @@ class ScanPageController extends GetxController {
       number.value = Get.arguments;
       update();
     }
-    print("numberCode: ${number.value}");
 
   }
 

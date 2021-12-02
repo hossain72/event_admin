@@ -1,3 +1,4 @@
+import 'package:event_admin/app/modules/home/views/widgets/drawer_menu.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,7 +17,8 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: const Color.fromRGBO(94, 196, 1, 1),
         title: const Text('Home'),
       ),
-      body: Container(
+      drawer: const DrawerMenu(),
+      body: SizedBox(
         height: height,
         width: width,
         child: Column(
@@ -28,17 +30,17 @@ class HomeView extends GetView<HomeController> {
               children: [
                 Expanded(
                     child: GestureDetector(
-                      onTap: () {
-                        Get.toNamed('/scan-page');
-                      },
-                      child: SizedBox(
-                  height: height / 5,
-                  child: Image.asset(
+                  onTap: () {
+                    Get.toNamed('/scan-page');
+                  },
+                  child: SizedBox(
+                    height: height / 5,
+                    child: Image.asset(
                       'assets/images/bus.png',
                       fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                    )),
+                )),
                 const SizedBox(
                   width: 10,
                 ),
@@ -48,12 +50,12 @@ class HomeView extends GetView<HomeController> {
                       Get.toNamed('/scan-page');
                     },
                     child: SizedBox(
-                    height: height / 5,
-                    child: Image.asset(
-                      'assets/images/event.png',
-                      fit: BoxFit.fill,
+                      height: height / 5,
+                      child: Image.asset(
+                        'assets/images/event.png',
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
                   ),
                 )
               ],
@@ -69,12 +71,12 @@ class HomeView extends GetView<HomeController> {
                       Get.toNamed('/scan-page');
                     },
                     child: SizedBox(
-                    height: height / 5,
-                    child: Image.asset(
-                      'assets/images/food.png',
-                      fit: BoxFit.fill,
+                      height: height / 5,
+                      child: Image.asset(
+                        'assets/images/food.png',
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
                   ),
                 ),
                 const SizedBox(
@@ -86,12 +88,12 @@ class HomeView extends GetView<HomeController> {
                       Get.toNamed('/scan-page');
                     },
                     child: SizedBox(
-                    height: height / 5,
-                    child: Image.asset(
-                      'assets/images/bus.png',
-                      fit: BoxFit.fill,
+                      height: height / 5,
+                      child: Image.asset(
+                        'assets/images/bus.png',
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
                   ),
                 )
               ],
