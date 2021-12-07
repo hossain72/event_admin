@@ -264,7 +264,7 @@ class LoginView extends GetView<LoginController> {
                           SizedBox(
                             height: height / 20,
                           ),
-                          Center(
+                          /*Center(
                             child: RichText(
                               text: TextSpan(
                                   text: "Don't have an account? ",
@@ -292,7 +292,7 @@ class LoginView extends GetView<LoginController> {
                           ),
                           SizedBox(
                             height: height / 50,
-                          ),
+                          ),*/
                         ],
                       ),
                     ),

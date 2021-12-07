@@ -37,12 +37,12 @@ class LoginController extends GetxController {
       isLoading(true);
       var login = await LoginProvider().loginAdmin(mobileNumber, password);
       if (login != null) {
-        status.value = login.success.toString();
+        status.value = login.success!.toString();
         update();
         if (status.value == "true") {
-          localStorage.write('token', login.data!.accessToken);
-          localStorage.write('isLogged', true);
-          Get.offAllNamed('/notification');
+          localStorage.write('token', login.data!.accessToken.toString());
+          localStorage.write('isLogged', "true");
+          Get.offAllNamed('/home');
         } else {}
       } else {}
     } finally {
